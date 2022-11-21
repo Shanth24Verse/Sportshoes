@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <title>Sportyshoes</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #640000;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+a.list-group-item, button.list-group-item {
+    color: #fff;
+    background-color: #6c6c6c;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+  
+</head>
+<body>
+
+<div class="navbar">
+  <a href="/">ShLgo</a>
+  <a th:href="@{/logout}" class="right">Logout</a>
+</div>
+
+<div class="container">
+  <h2>Products</h2>
+  <div class="list-group">
+    <a th:href="@{viewAllProducts}" class="list-group-item">View Product</a>
+    <a href="#" class="list-group-item">Search Product</a>
+    <a th:href="@{showProductForm}" class="list-group-item">Add Product</a>
+    <a href="#" class="list-group-item">Delete Product</a>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Customer</h2>
+  <div class="list-group">
+    <a th:href="@{viewAllCustomers}" class="list-group-item">View Customer</a>
+    <a href="#" class="list-group-item">Search Customer</a>
+    <a th:href="@{showCustomerForm}" class="list-group-item">Add Customer</a>
+    <a href="#" class="list-group-item">Delete Customer</a>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Category</h2>
+  <div class="list-group">
+    <a th:href="@{viewAllCategorys}" class="list-group-item">View Category</a>
+    <a href="#" class="list-group-item">Search Category</a>
+    <a th:href="@{showCategoryForm}" class="list-group-item">Add Category</a>
+    <a href="#" class="list-group-item">Delete Category</a>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Purchase Reports</h2>
+  <div class="list-group">
+    <a th:href="@{reports}" class="list-group-item">View Report</a>
+  </div>
+</div>
+
+</body>
+</html>

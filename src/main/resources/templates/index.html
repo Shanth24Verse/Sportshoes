@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sportyshoes</title>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #ffd3d3;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #640000;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.column {
+  float: left;
+  width: 24.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+  margin-left: 100px;
+  
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #8f0000;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.btn {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #a52b2b;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #cb6f6f;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="navbar">
+  <a href="/">ShLgo</a>
+  <a href="admin" class="right">Admin</a>
+</div>
+
+<div class="about-section">
+  <h1>Welcome to SportsShoes</h1>
+  <p>Some text about who we are and what we do.</p>
+  <p>Resize the browser window to see that this page is responsive by the way.</p>
+</div>
+
+<h2 style="text-align:center">Our Products</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="nike.jpg" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Puma</h2>
+        <p class="title">Unisex-Adult Ferrari</p>
+        <p>5499</p>
+        <p><a class="btn btn-primary" href="#" role="button">Buy</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="bata.jpg" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Nike</h2>
+        <p class="title">Precision 5</p>
+        <p>4999</p>
+        <p><a class="btn btn-primary" href="#" role="button">Buy</a></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="puma.jpg" alt="John" style="width:100%">
+      <div class="container">
+        <h2>Bata</h2>
+        <p class="title">Phantom Gt2</p>
+        <p>6099</p>
+        <p><a class="btn btn-primary" href="#" role="button">Buy</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
